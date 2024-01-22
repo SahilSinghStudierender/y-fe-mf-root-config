@@ -47,15 +47,25 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@Y/root-config": "//localhost:9000/Y-root-config.js",
         "@Y/navbar": "//localhost:9001/main.js",
-        "@Y/homepage": "//localhost:9002/main.js"
+        "@Y/homepage": "//localhost:9002/main.js",
+        "@Y/post-detail": "//localhost:9003/main.js"
       }
     }
   </script>
-  <% } %>
-
+  <% } else { %>
+<script type="systemjs-importmap">
+  {
+    "imports": {
+      "@Y/root-config": "//localhost:8000/Y-root-config.js",
+      "@Y/navbar": "//localhost:8001/main.js",
+      "@Y/homepage": "//localhost:8002/main.js",
+      "@Y/post-detail": "//localhost:8003/main.js"
+    }
+  }
+</script>
+<% } %>
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
