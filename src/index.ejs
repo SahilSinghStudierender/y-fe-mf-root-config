@@ -60,6 +60,19 @@
       }
     }
   </script>
+  <% } else if(isSingleNginx) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@Y/root-config": "//localhost:6000/mf/root-config",
+        "@Y/homepage": "//localhost:6000/mf/homepage",
+        "@Y/navbar-vue": "//localhost:6000/mf/navbar",
+        "@Y/post-detail-react": "//localhost:6000/mf/post-detail",
+        "@Y/parcel-comments": "//localhost:6000/mf/parcel-comments",
+        "@Y/favourite": "//localhost:6000/mf/favourite"
+      }
+    }
+  </script>
   <% } else { %>
 <script type="systemjs-importmap">
   {
