@@ -8,8 +8,11 @@
     "check-format": "prettier --check .",
     "prepare": "husky install",
     "build": "concurrently npm:build:*",
+    "build-singleNginx": "concurrently npm:build-singleNginx:*",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "build-singleNginx:webpack-singleNginx": "webpack --mode=production --env isSingleNginx",
+    "build-singleNginx:types": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
